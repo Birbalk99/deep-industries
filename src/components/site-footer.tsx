@@ -58,11 +58,11 @@ export function SiteFooter() {
           <div className="lg:col-span-4">
             <div className="font-semibold mb-4 text-sm">Get in touch</div>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-start gap-3"><MapPin className="size-4 mt-0.5 shrink-0 text-accent" /> Plot 24, GIDC Industrial Estate, Vatva, Ahmedabad, Gujarat 382445, India</li>
-              <li className="flex items-center gap-3"><Phone className="size-4 shrink-0 text-accent" /> +91 98765 43210</li>
+              <li className="flex items-start gap-3"><MapPin className="size-4 mt-0.5 shrink-0 text-accent" /> Shivam arcade 2, hanspura, Nava Naroda, Ahmedabad 382330, India</li>
+              <li className="flex items-center gap-3"><Phone className="size-4 shrink-0 text-accent" /> +91 9664867782</li>
               <li className="flex items-center gap-3"><Mail className="size-4 shrink-0 text-accent" /> info@deepindustries.in</li>
               <li className="flex items-center gap-3"><Clock className="size-4 shrink-0 text-accent" /> Mon–Sat · 9:00–19:00 IST</li>
-              <li className="flex items-center gap-3"><MessageCircle className="size-4 shrink-0 text-accent" /> <a href="https://wa.me/919876543210" className="hover:text-accent">WhatsApp chat</a></li>
+              <li className="flex items-center gap-3"><MessageCircle className="size-4 shrink-0 text-accent" /> <a href="https://wa.me/919664867782" className="hover:text-accent">WhatsApp chat</a></li>
             </ul>
           </div>
         </div>

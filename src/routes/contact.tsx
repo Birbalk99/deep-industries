@@ -76,9 +76,9 @@ function Contact() {
                   Headquarters
                 </div>
                 <p className="text-sm text-foreground/80 leading-relaxed">
-                  Plot 24, GIDC Industrial Estate, Vatva
+                  Shivam arcade 2, hanspura, Nava Naroda
                   <br />
-                  Ahmedabad, Gujarat 382445, India
+                  Ahmedabad 382330, India
                 </p>
               </div>
               <div>
@@ -86,7 +86,7 @@ function Contact() {
                   Sales
                 </div>
                 <p className="text-sm text-foreground/80 leading-relaxed">
-                  +91 98765 43210
+                  +91 9664867782
                   <br />
                   info@deepindustries.in
                 </p>
