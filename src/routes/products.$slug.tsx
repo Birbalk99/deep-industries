@@ -6,7 +6,7 @@ import { Reveal } from "@/components/reveal";
 import { getMachine, machines, type Machine } from "@/data/machines";
 
 export const Route = createFileRoute("/products/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): { machine: Machine } => {
     const machine = getMachine(params.slug);
     if (!machine) throw notFound();
     return { machine };
