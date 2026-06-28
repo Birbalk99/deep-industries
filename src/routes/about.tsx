@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
-import facility from "@/assets/facility.jpg";
+import facility from "@/assets/about-factory.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -26,26 +26,26 @@ export const Route = createFileRoute("/about")({
 const principles = [
   {
     n: "01",
-    t: "Engineering first",
-    d: "Every machine is designed by the engineers who will commission it. Specifications are written backwards from the factory floor.",
+    t: "Engineering First",
+    d: "Every product is designed by the engineers who will commission it. Specifications are written backwards from the hospital and factory floor.",
   },
   {
     n: "02",
-    t: "Long horizon",
-    d: "Our platforms are built to operate two decades. Components are sourced for service life, not procurement cost.",
+    t: "Built To Last",
+    d: "Our equipment is built to operate for decades. SS 316L contact parts and components sourced for service life, not procurement cost.",
   },
   {
     n: "03",
-    t: "Quiet operation",
-    d: "We measure success in uneventful production runs. The best machine is the one that disappears into the line.",
+    t: "Service Forever",
+    d: "We measure success in uneventful operation. Every installation comes with lifelong service, spares and AMC support.",
   },
 ];
 
 const numbers = [
-  { v: "2009", l: "Founded" },
-  { v: "180+", l: "Engineers" },
-  { v: "2,400", l: "Machines deployed" },
-  { v: "27", l: "Countries" },
+  { v: "2017", l: "Founded" },
+  { v: "120+", l: "Engineers & Technicians" },
+  { v: "500+", l: "Projects Delivered" },
+  { v: "20+", l: "Countries" },
 ];
 
 function About() {
@@ -53,16 +53,16 @@ function About() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteNav />
 
-      <section className="pt-40 pb-24 px-6">
+      <section className="pt-44 pb-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <span className="font-mono-tight text-accent text-[10px] uppercase tracking-[0.4em] mb-6 block">
+          <span className="text-accent text-[11px] uppercase tracking-[0.3em] font-semibold mb-6 block">
             About Deepindustries
           </span>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.95] max-w-4xl">
-            We design automation as if our name were on every part it makes.
+            Engineering excellence,<br />in service of mankind.
           </h1>
           <p className="mt-10 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
-            For fifteen years, Deepindustries has built the machines and the engineering support behind them — for aerospace, semiconductor, medical and heavy-industry plants on four continents.
+            Established in 2017, Deepindustries is a trusted manufacturer, supplier and exporter of precision-engineered hospital CSSD turnkey projects, autoclaves, sterilizers, pharmaceutical machinery, laboratory equipment and industrial automation systems — delivered to hospitals, pharma companies and industries across India and 20+ international markets.
           </p>
         </div>
       </section>
@@ -70,7 +70,7 @@ function About() {
       <section className="px-6 mb-32">
         <div className="max-w-7xl mx-auto">
           <Reveal>
-            <div className="aspect-[21/9] overflow-hidden rounded-2xl bg-card outline outline-1 -outline-offset-1 outline-border">
+            <div className="aspect-[21/9] overflow-hidden rounded-3xl bg-card">
               <img
                 src={facility}
                 alt="Deepindustries manufacturing facility"

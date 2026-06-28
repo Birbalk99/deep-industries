@@ -29,24 +29,24 @@ function ProductsIndex() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteNav />
 
-      <section className="pt-40 pb-20 px-6">
+      <section className="pt-44 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <span className="font-mono-tight text-accent text-[10px] uppercase tracking-[0.4em] mb-6 block">
-            The Fleet / 2026
+          <span className="text-accent text-[11px] uppercase tracking-[0.3em] font-semibold mb-6 block">
+            Products & Solutions
           </span>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight max-w-4xl leading-[0.95]">
-            Machines built for plants that don&apos;t stop.
+            Equipment engineered for hospitals, pharma and industry.
           </h1>
           <p className="mt-8 max-w-xl text-lg text-muted-foreground">
-            Five platforms, each engineered around a single discipline. Choose a machine to read the full specification.
+            Eleven product categories — from CSSD turnkey projects to industrial automation. Tap any product to view full specifications, applications and documentation.
           </p>
         </div>
       </section>
 
       <section className="px-6 pb-32">
-        <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+        <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {machines.map((m, i) => (
-            <Reveal key={m.slug} delay={(i % 3) * 120}>
+            <Reveal key={m.slug} delay={(i % 3) * 100}>
               <MachineCard machine={m} index={i} />
             </Reveal>
           ))}
