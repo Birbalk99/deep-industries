@@ -3,7 +3,7 @@ import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { MachineCard } from "@/components/machine-card";
 import { Reveal } from "@/components/reveal";
-import { getMachine, machines } from "@/data/machines";
+import { getMachine, machines, type Machine } from "@/data/machines";
 
 export const Route = createFileRoute("/products/$slug")({
   loader: ({ params }) => {
@@ -42,8 +42,8 @@ export const Route = createFileRoute("/products/$slug")({
 function ProductDetail() {
   const { machine } = Route.useLoaderData();
   const related = machine.related
-    .map((slug) => machines.find((m) => m.slug === slug))
-    .filter(Boolean) as typeof machines;
+    .map((slug: string) => machines.find((m) => m.slug === slug))
+    .filter(Boolean) as Machine[];
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -116,7 +116,7 @@ function ProductDetail() {
               Specifications
             </span>
             <div className="grid grid-cols-2 gap-px bg-border">
-              {machine.specs.map((s) => (
+              {machine.specs.map((s: { label: string; value: string }) => (
                 <div key={s.label} className="bg-background p-6">
                   <div className="font-mono-tight text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-3">
                     {s.label}
@@ -126,7 +126,7 @@ function ProductDetail() {
               ))}
             </div>
             <ul className="mt-8 space-y-3">
-              {machine.highlights.map((h) => (
+              {machine.highlights.map((h: string) => (
                 <li key={h} className="flex items-center gap-3 text-sm text-foreground/80">
                   <span className="size-1.5 bg-accent rounded-full shrink-0" />
                   {h}
