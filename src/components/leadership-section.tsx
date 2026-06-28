@@ -42,25 +42,26 @@ export function LeadershipSection({
           </h2>
         </Reveal>
 
-        <div
+        {/* <div
           className={cn(
             "grid gap-12",
             isSingle
-              ? "md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-16 items-center"
+              ? "md:grid-cols-[320px_minmax(0,1fr)] md:gap-20 items-start"
               : "sm:grid-cols-2 lg:grid-cols-3",
           )}
-        >
+        > */}
+        <div className="space-y-12">
           {members.map((m, i) => (
             <Reveal key={m.name} delay={i * 120}>
               <article
                 className={cn(
                   "grid gap-10",
                   isSingle
-                    ? "md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-16 items-center"
+                    ? "md:grid-cols-[320px_minmax(0,1fr)] md:gap-20 items-start"
                     : "grid-cols-1",
                 )}
               >
-                <div className="relative">
+                <div className="relative max-w-[320px] w-full mx-auto md:mx-0">
                   <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-accent/10 via-transparent to-transparent blur-2xl" aria-hidden />
                   <div className="relative overflow-hidden rounded-3xl bg-card shadow-[var(--shadow-elegant)] aspect-[4/5]">
                     <img
@@ -74,19 +75,20 @@ export function LeadershipSection({
                   </div>
                 </div>
 
-                <div>
+                <div className="w-full max-w-4xl">
                   <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight">
                     {m.name}
                   </h3>
                   <p className="mt-2 font-mono-tight text-[11px] uppercase tracking-[0.25em] text-accent">
                     {m.designation}
                   </p>
-                  <p className="mt-6 text-base md:text-lg text-muted-foreground leading-relaxed">
+                  <p className="mt-6 text-base md:text-lg leading-8 text-justify text-muted-foreground max-w-none">
                     {m.bio}
                   </p>
 
                   {m.highlights && m.highlights.length > 0 && (
-                    <ul className="mt-8 grid sm:grid-cols-2 gap-3">
+                    // <ul className="mt-8 grid sm:grid-cols-2 gap-3">
+                    <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
                       {m.highlights.map((h) => (
                         <li
                           key={h}

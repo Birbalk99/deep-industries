@@ -54,8 +54,12 @@ export function SiteNav() {
       {/* Main nav */}
       <nav className="border-b border-border bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/65">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-6">
-          <Link to="/" className="flex items-center gap-2.5 group shrink-0">
-            <span className="block size-6 bg-accent rounded-md transition-transform group-hover:scale-110" />
+          <Link to="/" className="flex items-center gap-3 group shrink-0">
+            <img
+              src="/favicon.ico"
+              alt="Deep Industries Logo"
+              className="w-10 h-10 object-contain transition-transform group-hover:scale-110"
+            />
             <span className="font-extrabold tracking-tight text-lg">
               Deep<span className="text-accent">industries</span>
             </span>

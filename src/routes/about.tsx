@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
 import facility from "@/assets/about-factory.jpg";
 import { LeadershipSection, type LeadershipMember } from "@/components/leadership-section";
-import directorDeepak from "@/assets/director-deepak.jpg";
+import directorDeepak from "@/assets/director-deepak.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -44,10 +44,10 @@ const principles = [
 ];
 
 const numbers = [
-  { v: "2017", l: "Founded" },
-  { v: "120+", l: "Engineers & Technicians" },
-  { v: "500+", l: "Projects Delivered" },
-  { v: "20+", l: "Countries" },
+  { v: "2026", l: "Founded" },
+  { v: "10+", l: "Engineers & Technicians" },
+  { v: "50+", l: "Projects Delivered" },
+  { v: "20+", l: "States Covered" },
 ];
 
 const leadership: LeadershipMember[] = [
@@ -104,7 +104,7 @@ function About() {
       <section className="py-24 border-y border-border bg-card/30">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-16 max-w-lg">
-            Three principles, kept since 2009.
+            Three principles, kept since 2026.
           </h2>
           <div className="grid md:grid-cols-3 gap-px bg-border">
             {principles.map((p, i) => (
