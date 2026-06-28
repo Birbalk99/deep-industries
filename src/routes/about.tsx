@@ -3,6 +3,8 @@ import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
 import facility from "@/assets/about-factory.jpg";
+import { LeadershipSection, type LeadershipMember } from "@/components/leadership-section";
+import directorDeepak from "@/assets/director-deepak.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -46,6 +48,21 @@ const numbers = [
   { v: "120+", l: "Engineers & Technicians" },
   { v: "500+", l: "Projects Delivered" },
   { v: "20+", l: "Countries" },
+];
+
+const leadership: LeadershipMember[] = [
+  {
+    name: "Deepak Kumar",
+    designation: "Founder & Director",
+    photo: directorDeepak,
+    bio: "Deepak Kumar is the Founder & Director of Deepindustries. With a vision of engineering excellence, innovation, and customer satisfaction, he has led the company in delivering high-quality manufacturing solutions, hospital CSSD turnkey projects, sterilization equipment, industrial automation systems, and precision-engineered products. His commitment to quality, reliability, and continuous improvement has helped Deepindustries build long-term relationships with customers across India and international markets.",
+    highlights: [
+      "6+ Years of Industry Experience",
+      "Engineering & Manufacturing Expert",
+      "Customer-Centric Leadership",
+      "Innovation-Driven Approach",
+    ],
+  },
 ];
 
 function About() {
@@ -115,6 +132,8 @@ function About() {
           ))}
         </div>
       </section>
+
+      <LeadershipSection members={leadership} />
 
       <SiteFooter />
     </div>
