@@ -115,7 +115,7 @@ function ProductDetail() {
                 Applications
               </span>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {machine.applications.map((a) => (
+                {machine.applications.map((a: string) => (
                   <li key={a} className="flex items-start gap-2 text-sm text-foreground/80">
                     <span className="size-1.5 rounded-full bg-accent mt-2 shrink-0" />
                     {a}
