@@ -50,18 +50,18 @@ function ProductDetail() {
       <SiteNav />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-36 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <Link
             to="/products"
-            className="font-mono-tight text-[10px] uppercase tracking-[0.3em] text-muted-foreground hover:text-accent transition-colors"
+            className="text-[11px] uppercase tracking-[0.2em] font-semibold text-muted-foreground hover:text-accent transition-colors"
           >
             ← All machines
           </Link>
 
           <div className="mt-10 grid md:grid-cols-2 gap-16 items-center">
             <Reveal>
-              <div className="aspect-square overflow-hidden rounded-2xl bg-card outline outline-1 -outline-offset-1 outline-border">
+              <div className="aspect-square overflow-hidden rounded-3xl bg-card">
                 <img
                   src={machine.image}
                   alt={machine.name}
@@ -72,7 +72,7 @@ function ProductDetail() {
               </div>
             </Reveal>
             <Reveal delay={120}>
-              <span className="font-mono-tight text-accent text-[10px] uppercase tracking-[0.3em] mb-4 block">
+              <span className="text-accent text-[11px] uppercase tracking-[0.3em] font-semibold mb-4 block">
                 {machine.series}
               </span>
               <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-[0.95] mb-6">
@@ -84,15 +84,15 @@ function ProductDetail() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   to="/contact"
-                  className="px-7 py-3 bg-foreground text-background font-bold text-[11px] uppercase tracking-[0.2em] rounded-full hover:bg-accent hover:text-accent-foreground transition-colors"
+                  className="px-6 h-11 inline-flex items-center rounded-full bg-accent text-accent-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
                 >
-                  Request quote
+                  Request Quote
                 </Link>
                 <button
                   type="button"
-                  className="px-7 py-3 border border-border font-bold text-[11px] uppercase tracking-[0.2em] rounded-full hover:bg-foreground/5 transition-colors"
+                  className="px-6 h-11 inline-flex items-center rounded-full border border-border font-semibold text-sm hover:bg-card transition-colors"
                 >
-                  Download spec
+                  Download Spec Sheet
                 </button>
               </div>
             </Reveal>
@@ -101,24 +101,37 @@ function ProductDetail() {
       </section>
 
       {/* Overview + specs */}
-      <section className="py-24 border-t border-border bg-card/30">
+      <section className="py-24 bg-card">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-[1fr_1.2fr] gap-16">
           <Reveal>
-            <span className="font-mono-tight text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-5 block">
+            <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-accent mb-5 block">
               Overview
             </span>
             <p className="text-2xl md:text-3xl font-medium tracking-tight leading-snug text-pretty">
               {machine.overview}
             </p>
+            <div className="mt-10">
+              <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-accent mb-4 block">
+                Applications
+              </span>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {machine.applications.map((a: string) => (
+                  <li key={a} className="flex items-start gap-2 text-sm text-foreground/80">
+                    <span className="size-1.5 rounded-full bg-accent mt-2 shrink-0" />
+                    {a}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </Reveal>
           <Reveal delay={120}>
-            <span className="font-mono-tight text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-5 block">
+            <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-accent mb-5 block">
               Specifications
             </span>
-            <div className="grid grid-cols-2 gap-px bg-border">
+            <div className="grid grid-cols-2 gap-px bg-border rounded-2xl overflow-hidden">
               {machine.specs.map((s: { label: string; value: string }) => (
                 <div key={s.label} className="bg-background p-6">
-                  <div className="font-mono-tight text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                  <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-medium mb-3">
                     {s.label}
                   </div>
                   <div className="text-2xl font-extrabold tracking-tight">{s.value}</div>
@@ -142,15 +155,15 @@ function ProductDetail() {
         <section className="py-32 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="flex items-end justify-between mb-12 gap-8">
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Related machines</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Related products</h2>
               <Link
                 to="/products"
-                className="font-mono-tight text-[10px] uppercase tracking-[0.2em] text-muted-foreground hover:text-accent"
+                className="text-[11px] uppercase tracking-[0.2em] font-semibold text-muted-foreground hover:text-accent"
               >
                 View all →
               </Link>
             </div>
-            <div className="grid sm:grid-cols-2 gap-x-8 gap-y-12">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {related.map((m, i) => (
                 <Reveal key={m.slug} delay={i * 120}>
                   <MachineCard machine={m} />
