@@ -83,7 +83,7 @@ function Hero() {
           <span className="text-background/70">{heroSlides[i].subtitle}</span>
         </h1>
         <p className="max-w-2xl mx-auto text-base md:text-lg text-background/80 mb-10">
-          Delivering world-class engineering solutions, hospital sterilization systems, pharmaceutical machinery, industrial automation and customized manufacturing — since 2017.
+          Delivering world-class engineering solutions, hospital sterilization systems, pharmaceutical machinery, industrial automation and customized manufacturing.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
           <Link to="/products" className="px-7 h-12 inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
@@ -92,9 +92,6 @@ function Hero() {
           <Link to="/contact" className="px-7 h-12 inline-flex items-center rounded-full bg-background text-foreground font-semibold text-sm hover:bg-background/90 transition-colors">
             Request Quote
           </Link>
-          <button type="button" className="px-7 h-12 inline-flex items-center gap-2 rounded-full border border-background/40 text-background font-semibold text-sm hover:bg-background/10 transition-colors">
-            <Play className="size-4" /> Watch Company Video
-          </button>
         </div>
 
         {/* slide indicators */}
@@ -114,11 +111,11 @@ function Hero() {
 }
 
 const stats = [
-  { v: "9+", l: "Years Experience" },
-  { v: "500+", l: "Projects Delivered" },
-  { v: "100+", l: "Products" },
-  { v: "20+", l: "Countries Served" },
-  { v: "1000+", l: "Happy Customers" },
+  { v: "7+", l: "Years Experience" },
+  { v: "300+", l: "Projects Delivered" },
+  { v: "50+", l: "Products" },
+  { v: "20+", l: "States Covered" },
+  { v: "100+", l: "Happy Customers" },
   { v: "99%", l: "Customer Satisfaction" },
 ];
 
@@ -190,7 +187,7 @@ function Index() {
               Deepindustries is a trusted manufacturer, supplier and exporter of precision-engineered hospital CSSD turnkey projects, autoclaves, sterilizers, pharmaceutical machinery, laboratory equipment and industrial automation systems.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-10">
-              Established in 2017 with a vision to serve mankind through engineering excellence, we deliver innovative, reliable and affordable solutions to hospitals, pharmaceutical industries, laboratories and manufacturing organizations across India and 20+ international markets.
+              Established in 2026 with a vision to serve mankind through engineering excellence, we deliver innovative, reliable and affordable solutions to hospitals, pharmaceutical industries, laboratories and manufacturing organizations across 20+ States Markets.
             </p>
             <Link to="/about" className="inline-flex items-center gap-2 text-accent font-semibold group">
               Read our story <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
@@ -391,7 +388,7 @@ function Index() {
       <section className="py-20 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-[11px] uppercase tracking-[0.3em] text-muted-foreground font-semibold mb-10">
-            Trusted by 1000+ hospitals, pharma companies and industries
+            Trusted by 100+ hospitals, pharma companies and industries
           </p>
         </div>
         <div className="flex gap-16 animate-marquee whitespace-nowrap">

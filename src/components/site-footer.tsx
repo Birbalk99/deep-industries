@@ -14,7 +14,7 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              Manufacturer of hospital CSSD turnkey projects, sterilization equipment, pharmaceutical machinery, laboratory equipment and industrial automation systems — engineered in Ahmedabad, delivered worldwide since 2017.
+              Manufacturer of hospital CSSD turnkey projects, sterilization equipment, pharmaceutical machinery, laboratory equipment and industrial automation systems — engineered in Ahmedabad, delivered worldwide since 2026.
             </p>
             <div className="flex gap-2 mt-6">
               {[Linkedin, Facebook, Instagram].map((Icon, i) => (

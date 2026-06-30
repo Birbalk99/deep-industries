@@ -45,7 +45,7 @@ function Industries() {
             Engineered for the industries that keep India running.
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
-            From 500-bed hospital CSSDs to GMP-grade pharma utility blocks, Deepindustries equipment is trusted across critical sectors in India and 20+ international markets.
+            From 500-bed hospital CSSDs to GMP-grade pharma utility blocks, Deepindustries equipment is trusted across critical sectors in 20+ States Markets.
           </p>
         </div>
       </section>

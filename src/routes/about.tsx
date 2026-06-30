@@ -79,7 +79,7 @@ function About() {
             Engineering excellence,<br />in service of mankind.
           </h1>
           <p className="mt-10 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Established in 2017, Deepindustries is a trusted manufacturer, supplier and exporter of precision-engineered hospital CSSD turnkey projects, autoclaves, sterilizers, pharmaceutical machinery, laboratory equipment and industrial automation systems — delivered to hospitals, pharma companies and industries across India and 20+ international markets.
+            Established in 2026, Deepindustries is a trusted manufacturer, supplier and exporter of precision-engineered hospital CSSD turnkey projects, autoclaves, sterilizers, pharmaceutical machinery, laboratory equipment and industrial automation systems — delivered to hospitals, pharma companies and industries across 20+ States markets.
           </p>
         </div>
       </section>

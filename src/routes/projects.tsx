@@ -42,7 +42,7 @@ function Projects() {
             500+ projects, delivered on time.
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
-            Selected installations across hospitals, pharma plants and factory floors — in India and 20+ international markets.
+            Selected installations across hospitals, pharma plants and factory floors — in 20+ States Markets.
           </p>
         </div>
       </section>
