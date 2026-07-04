@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Linkedin, Facebook, Instagram } from "lucide-react";
-
+const startYear = 2024;
+const currentYear = new Date().getFullYear();
 export function SiteFooter() {
   return (
     <footer className="bg-card border-t border-border">
@@ -14,7 +15,7 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              Manufacturer of hospital CSSD turnkey projects, sterilization equipment, pharmaceutical machinery, laboratory equipment and industrial automation systems — engineered in Ahmedabad, delivered worldwide since 2026.
+              Manufacturer of hospital CSSD turnkey projects, sterilization equipment, pharmaceutical machinery, laboratory equipment and industrial automation systems — engineered in Ahmedabad, delivered whole <span className="text-accent">India</span> since 2024.
             </p>
             <div className="flex gap-2 mt-6">
               {[Linkedin, Facebook, Instagram].map((Icon, i) => (
@@ -68,7 +69,10 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-          <div>&copy; {new Date().getFullYear()} Deepindustries. All rights reserved.</div>
+          <div>
+            &copy; {startYear}
+            {currentYear > startYear ? ` - ${currentYear}` : ""} Deepindustries. All rights reserved.
+          </div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-accent">Privacy Policy</a>
             <a href="#" className="hover:text-accent">Terms &amp; Conditions</a>

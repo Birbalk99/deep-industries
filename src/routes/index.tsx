@@ -112,8 +112,8 @@ function Hero() {
 
 const stats = [
   { v: "7+", l: "Years Experience" },
-  { v: "300+", l: "Projects Delivered" },
-  { v: "50+", l: "Products" },
+  { v: "130+", l: "Projects Delivered" },
+  { v: "30+", l: "Products" },
   { v: "20+", l: "States Covered" },
   { v: "100+", l: "Happy Customers" },
   { v: "99%", l: "Customer Satisfaction" },
@@ -187,7 +187,7 @@ function Index() {
               Deepindustries is a trusted manufacturer, supplier and exporter of precision-engineered hospital CSSD turnkey projects, autoclaves, sterilizers, pharmaceutical machinery, laboratory equipment and industrial automation systems.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-10">
-              Established in 2026 with a vision to serve mankind through engineering excellence, we deliver innovative, reliable and affordable solutions to hospitals, pharmaceutical industries, laboratories and manufacturing organizations across 20+ States Markets.
+              Established in 2024 with a vision to serve mankind through engineering excellence, we deliver innovative, reliable and affordable solutions to hospitals, pharmaceutical industries, laboratories and manufacturing organizations across 20+ States Markets.
             </p>
             <Link to="/about" className="inline-flex items-center gap-2 text-accent font-semibold group">
               Read our story <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
@@ -388,7 +388,7 @@ function Index() {
       <section className="py-20 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-[11px] uppercase tracking-[0.3em] text-muted-foreground font-semibold mb-10">
-            Trusted by 100+ hospitals, pharma companies and industries
+            Trusted by 75+ hospitals, pharma companies and industries
           </p>
         </div>
         <div className="flex gap-16 animate-marquee whitespace-nowrap">
@@ -414,7 +414,7 @@ function Index() {
       </section>
 
       {/* Certifications */}
-      <section className="py-24 px-6">
+      {/* <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <Reveal className="text-center mb-12">
             <div className="text-accent text-[11px] uppercase tracking-[0.3em] font-semibold mb-4">Certifications</div>
@@ -426,7 +426,7 @@ function Index() {
               { t: "ISO 13485", s: "Medical Devices" },
               { t: "CE Marked", s: "European Conformity" },
               { t: "WHO-GMP", s: "Pharma Manufacturing" },
-              { t: "Export Certified", s: "20+ Countries" },
+              { t: "Export Certified", s: "20+ States" },
             ].map((c) => (
               <div key={c.t} className="p-6 rounded-2xl bg-card text-center border border-border">
                 <ShieldCheck className="size-7 text-accent mx-auto mb-3" />
@@ -436,7 +436,7 @@ function Index() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className="py-32 px-6 bg-accent text-accent-foreground">

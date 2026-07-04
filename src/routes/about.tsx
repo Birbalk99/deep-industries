@@ -44,7 +44,7 @@ const principles = [
 ];
 
 const numbers = [
-  { v: "2026", l: "Founded" },
+  { v: "2024", l: "Founded" },
   { v: "10+", l: "Engineers & Technicians" },
   { v: "50+", l: "Projects Delivered" },
   { v: "20+", l: "States Covered" },
@@ -79,7 +79,7 @@ function About() {
             Engineering excellence,<br />in service of mankind.
           </h1>
           <p className="mt-10 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Established in 2026, Deepindustries is a trusted manufacturer, supplier and exporter of precision-engineered hospital CSSD turnkey projects, autoclaves, sterilizers, pharmaceutical machinery, laboratory equipment and industrial automation systems — delivered to hospitals, pharma companies and industries across 20+ States markets.
+            Established in 2024, Deepindustries is a trusted manufacturer, supplier and exporter of precision-engineered hospital CSSD turnkey projects, autoclaves, sterilizers, pharmaceutical machinery, laboratory equipment and industrial automation systems — delivered to hospitals, pharma companies and industries across 20+ States markets.
           </p>
         </div>
       </section>
@@ -104,7 +104,7 @@ function About() {
       <section className="py-24 border-y border-border bg-card/30">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-16 max-w-lg">
-            Three principles, kept since 2026.
+            Three principles, kept since 2024.
           </h2>
           <div className="grid md:grid-cols-3 gap-px bg-border">
             {principles.map((p, i) => (
