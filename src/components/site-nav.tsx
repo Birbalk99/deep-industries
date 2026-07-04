@@ -90,12 +90,6 @@ export function SiteNav() {
             </button>
             <Link
               to="/contact"
-              className="px-4 h-9 inline-flex items-center text-[12px] font-semibold rounded-full border border-border hover:bg-card transition-colors"
-            >
-              Get Brochure
-            </Link>
-            <Link
-              to="/contact"
               className="px-4 h-9 inline-flex items-center text-[12px] font-semibold rounded-full bg-accent text-accent-foreground hover:opacity-90 transition-opacity"
             >
               Request Quote

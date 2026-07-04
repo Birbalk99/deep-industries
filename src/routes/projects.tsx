@@ -39,7 +39,7 @@ function Projects() {
         <div className="max-w-7xl mx-auto">
           <span className="text-accent text-[11px] uppercase tracking-[0.3em] font-semibold mb-6 block">Projects</span>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight max-w-4xl leading-[0.95]">
-            500+ projects, delivered on time.
+            130+ projects, delivered on time.
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
             Selected installations across hospitals, pharma plants and factory floors — in 20+ States Markets.
