@@ -5,7 +5,7 @@ import { Reveal } from "@/components/reveal";
 import cssd from "@/assets/hero-cssd.jpg";
 import pharma from "@/assets/hero-pharma.jpg";
 import automation from "@/assets/hero-automation.jpg";
-import factory from "@/assets/about-factory.jpg";
+import factory from "@/assets/gallery/images/about-factory.jpg";
 import { MapPin, Calendar } from "lucide-react";
 
 export const Route = createFileRoute("/projects")({
@@ -51,7 +51,7 @@ function Projects() {
           {projects.map((p, idx) => (
             <Reveal key={p.t} delay={(idx % 2) * 100}>
               <article className="group bg-card rounded-3xl overflow-hidden">
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-4/3 overflow-hidden">
                   <img src={p.img} alt={p.t} loading="lazy" width={1200} height={900} className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="p-8">

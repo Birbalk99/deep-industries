@@ -11,7 +11,7 @@ import { machines } from "@/data/machines";
 import heroCssd from "@/assets/hero-cssd.jpg";
 import heroAutomation from "@/assets/hero-automation.jpg";
 import heroPharma from "@/assets/hero-pharma.jpg";
-import factory from "@/assets/about-factory.jpg";
+import factory from "@/assets/gallery/images/about-factory.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -60,7 +60,7 @@ function Hero() {
     return () => clearInterval(id);
   }, []);
   return (
-    <section className="relative h-screen min-h-[680px] flex items-center justify-center text-center px-6 overflow-hidden bg-foreground text-background">
+    <section className="relative h-screen min-h-170 flex items-center justify-center text-center px-6 overflow-hidden bg-foreground text-background">
       {heroSlides.map((s, idx) => (
         <img
           key={idx}
@@ -68,11 +68,11 @@ function Hero() {
           alt={s.eyebrow}
           width={1920}
           height={1088}
-          className={`absolute inset-0 size-full object-cover transition-opacity duration-[2000ms] ease-out ${idx === i ? "opacity-90 scale-105" : "opacity-0 scale-100"}`}
+          className={`absolute inset-0 size-full object-cover transition-opacity duration-2000 ease-out ${idx === i ? "opacity-90 scale-105" : "opacity-0 scale-100"}`}
           style={{ transition: "opacity 2s ease, transform 8s ease-out" }}
         />
       ))}
-      <div className="absolute inset-0 bg-gradient-to-b from-foreground/40 via-foreground/20 to-foreground/70" />
+      <div className="absolute inset-0 bg-linear-to-b from-foreground/40 via-foreground/20 to-foreground/70" />
 
       <div className="relative z-10 max-w-5xl">
         <span key={`eb-${i}`} className="animate-fade-cross inline-block text-accent text-[11px] uppercase tracking-[0.4em] font-semibold mb-6">
@@ -174,7 +174,7 @@ function Index() {
       <section className="py-28 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <Reveal>
-            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-card">
+            <div className="aspect-4/5 overflow-hidden rounded-3xl bg-card">
               <img src={factory} alt="Deepindustries facility" loading="lazy" width={1200} height={1500} className="size-full object-cover" />
             </div>
           </Reveal>
@@ -224,8 +224,8 @@ function Index() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {grid.map((m, i) => (
               <Reveal key={m.slug} delay={(i % 3) * 100}>
-                <Link to="/products/$slug" params={{ slug: m.slug }} className="group block bg-background rounded-3xl overflow-hidden shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-shadow">
-                  <div className="aspect-[4/3] overflow-hidden bg-card">
+                <Link to="/products/$slug" params={{ slug: m.slug }} className="group block bg-background rounded-3xl overflow-hidden shadow-(--shadow-card) hover:shadow-(--shadow-elegant) transition-shadow">
+                  <div className="aspect-4/3 overflow-hidden bg-card">
                     <img src={m.image} alt={m.name} loading="lazy" width={1200} height={900} className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
                   </div>
                   <div className="p-7">
@@ -250,8 +250,8 @@ function Index() {
           return (
             <Reveal key={m.slug} as="section" className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
               <div className={reversed ? "md:order-2" : ""}>
-                <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-card">
-                  <img src={m.image} alt={m.name} loading="lazy" width={1200} height={1500} className="size-full object-cover transition-transform duration-[1500ms] ease-out hover:scale-[1.04]" />
+                <div className="aspect-4/5 overflow-hidden rounded-3xl bg-card">
+                  <img src={m.image} alt={m.name} loading="lazy" width={1200} height={1500} className="size-full object-cover transition-transform duration-1500 ease-out hover:scale-[1.04]" />
                 </div>
               </div>
               <div className={reversed ? "md:order-1" : ""}>

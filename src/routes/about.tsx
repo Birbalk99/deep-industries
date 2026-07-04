@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
-import facility from "@/assets/about-factory.jpg";
+import facility from "@/assets/gallery/images/about-factory.jpg";
 import { LeadershipSection, type LeadershipMember } from "@/components/leadership-section";
 import directorDeepak from "@/assets/director-deepak.png";
 
@@ -87,7 +87,7 @@ function About() {
       <section className="px-6 mb-32">
         <div className="max-w-7xl mx-auto">
           <Reveal>
-            <div className="aspect-[21/9] overflow-hidden rounded-3xl bg-card">
+            <div className="aspect-21/9 overflow-hidden rounded-3xl bg-card">
               <img
                 src={facility}
                 alt="Deepindustries manufacturing facility"
