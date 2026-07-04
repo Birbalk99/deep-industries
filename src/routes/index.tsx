@@ -60,7 +60,7 @@ function Hero() {
     return () => clearInterval(id);
   }, []);
   return (
-    <section className="relative h-screen min-h-170 flex items-center justify-center text-center px-6 overflow-hidden bg-foreground text-background">
+    <section className="relative h-screen min-h-170 overflow-hidden bg-foreground text-background">
       {heroSlides.map((s, idx) => (
         <img
           key={idx}
@@ -74,36 +74,40 @@ function Hero() {
       ))}
       <div className="absolute inset-0 bg-linear-to-b from-foreground/40 via-foreground/20 to-foreground/70" />
 
-      <div className="relative z-10 max-w-5xl">
-        <span key={`eb-${i}`} className="animate-fade-cross inline-block text-accent text-[11px] uppercase tracking-[0.4em] font-semibold mb-6">
-          {heroSlides[i].eyebrow}
-        </span>
-        <h1 key={`t-${i}`} className="animate-fade-cross text-5xl md:text-7xl lg:text-[88px] font-extrabold tracking-tight leading-[0.95] mb-6">
-          {heroSlides[i].title}<br />
-          <span className="text-background/70">{heroSlides[i].subtitle}</span>
-        </h1>
-        <p className="max-w-2xl mx-auto text-base md:text-lg text-background/80 mb-10">
-          Delivering world-class engineering solutions, hospital sterilization systems, pharmaceutical machinery, industrial automation and customized manufacturing.
-        </p>
-        <div className="flex flex-wrap gap-3 justify-center">
-          <Link to="/products" className="px-7 h-12 inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
-            Explore Products <ArrowRight className="size-4" />
-          </Link>
-          <Link to="/contact" className="px-7 h-12 inline-flex items-center rounded-full bg-background text-foreground font-semibold text-sm hover:bg-background/90 transition-colors">
-            Request Quote
-          </Link>
-        </div>
+      <div className="relative z-10 h-full px-6">
+        <div className="mx-auto flex h-full w-full max-w-7xl items-center">
+          <div className="max-w-5xl pt-20 text-left md:pt-12">
+            <span key={`eb-${i}`} className="animate-fade-cross inline-block text-accent text-[11px] uppercase tracking-[0.4em] font-semibold mb-6">
+              {heroSlides[i].eyebrow}
+            </span>
+            <h1 key={`t-${i}`} className="animate-fade-cross text-5xl md:text-7xl lg:text-[88px] font-extrabold tracking-tight leading-[0.95] mb-6">
+              {heroSlides[i].title}<br />
+              <span className="text-background/70">{heroSlides[i].subtitle}</span>
+            </h1>
+            <p className="max-w-2xl text-base md:text-lg text-background/80 mb-10">
+              Delivering world-class engineering solutions, hospital sterilization systems, pharmaceutical machinery, industrial automation and customized manufacturing.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/products" className="px-7 h-12 inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+                Explore Products <ArrowRight className="size-4" />
+              </Link>
+              <Link to="/contact" className="px-7 h-12 inline-flex items-center rounded-full bg-background text-foreground font-semibold text-sm hover:bg-background/90 transition-colors">
+                Request Quote
+              </Link>
+            </div>
 
-        {/* slide indicators */}
-        <div className="mt-12 flex gap-2 justify-center">
-          {heroSlides.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setI(idx)}
-              className={`h-1 rounded-full transition-all ${idx === i ? "w-10 bg-accent" : "w-5 bg-background/40"}`}
-              aria-label={`Slide ${idx + 1}`}
-            />
-          ))}
+            {/* slide indicators */}
+            <div className="mt-12 flex gap-2">
+              {heroSlides.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setI(idx)}
+                  className={`h-1 rounded-full transition-all ${idx === i ? "w-10 bg-accent" : "w-5 bg-background/40"}`}
+                  aria-label={`Slide ${idx + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -143,6 +147,45 @@ const industries = [
   { i: Cpu, t: "Industrial Automation" },
   { i: Beaker, t: "Chemical Industry" },
   { i: Building2, t: "Government Projects" },
+];
+
+const machineHighlights = [
+  {
+    title: "Filling Machine",
+    models: [
+      "Servo Base Filling",
+      "Volumetric Filling",
+      "Load Cell Base Filling",
+      "Flowmeter Base Filling",
+      "Gravity Filling",
+    ],
+  },
+  {
+    title: "Capping Machine",
+    models: [
+      "Screw Capping",
+      "ROPP Capping",
+      "Lead Pressing",
+      "Automatic Rotary Capping",
+    ],
+  },
+  {
+    title: "Sticker Labelling Machine",
+    models: [
+      "Round Bottle Sticker Labelling",
+      "Single Side Square Bottle Labelling",
+      "Double Side Square Bottle Labelling",
+      "Round Bottle Pneumatic Labelling",
+    ],
+  },
+  {
+    title: "Shrink Tunnel",
+    models: ["Semi Automatic", "Fully Automatic"],
+  },
+  {
+    title: "Turn Table",
+    models: ["Industrial Turn Table"],
+  },
 ];
 
 const process = [
@@ -237,6 +280,43 @@ function Index() {
                     </div>
                   </div>
                 </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Machine Range Snapshot */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <Reveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <div className="text-accent text-[11px] uppercase tracking-[0.3em] font-semibold mb-4">
+                Machine Portfolio
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight max-w-3xl leading-[1.05]">
+                Filling, capping, labelling and packaging systems for modern lines.
+              </h2>
+            </div>
+            <Link to="/contact" className="inline-flex items-center gap-2 text-accent font-semibold group shrink-0">
+              Discuss your requirement <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Reveal>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-4">
+            {machineHighlights.map((group, idx) => (
+              <Reveal key={group.title} delay={(idx % 5) * 70}>
+                <div className="h-full rounded-2xl border border-border bg-card p-5">
+                  <h3 className="text-base font-bold tracking-tight mb-3">{group.title}</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground leading-snug">
+                    {group.models.map((model) => (
+                      <li key={`${group.title}-${model}`} className="flex items-start gap-2">
+                        <span className="mt-1.5 size-1.5 rounded-full bg-accent shrink-0" />
+                        <span>{model}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </Reveal>
             ))}
           </div>
@@ -454,9 +534,6 @@ function Index() {
             <Link to="/contact" className="px-7 h-12 inline-flex items-center rounded-full bg-foreground text-background font-semibold text-sm hover:opacity-90 transition-opacity">
               Request Quote
             </Link>
-            <button className="px-7 h-12 inline-flex items-center rounded-full border border-accent-foreground/40 text-accent-foreground font-semibold text-sm hover:bg-accent-foreground/10 transition-colors">
-              Download Brochure
-            </button>
           </div>
         </div>
       </section>

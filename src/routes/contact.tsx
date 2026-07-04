@@ -3,6 +3,162 @@ import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
+import pharma from "@/assets/hero-pharma.jpg";
+import automation from "@/assets/hero-automation.jpg";
+import lab from "@/assets/product-lab.jpg";
+import autoclaveH from "@/assets/product-autoclave-horizontal.jpg";
+import eto from "@/assets/product-eto.jpg";
+
+type MachineCatalogGroup = {
+  title: string;
+  image: string;
+  sections: {
+    title: string;
+    models: string[];
+  }[];
+};
+
+const machineCatalog: MachineCatalogGroup[] = [
+  {
+    title: "Filling Machine",
+    image: pharma,
+    sections: [
+      {
+        title: "Servo Base Filling",
+        models: [
+          "Single Head Semi Automatic Filling",
+          "Two Head Semi Automatic Filling",
+          "Two Head Automatic Filling",
+          "Four Head Automatic Filling",
+          "Six Head Automatic Filling",
+          "Eight Head Automatic Filling",
+          "Ten Head Automatic Filling",
+        ],
+      },
+      {
+        title: "Volumetric Filling",
+        models: [
+          "Two Head Semi Automatic Filling",
+          "Two Head Automatic Filling",
+          "Four Head Automatic Filling",
+          "Six Head Automatic Filling",
+        ],
+      },
+      {
+        title: "Load Cell Base Filling",
+        models: [
+          "Single Head Semi Automatic Filling",
+          "Double Head Semi Automatic Filling",
+          "Double Head Automatic Filling",
+          "Four Head Automatic Filling",
+          "Six Head Automatic Filling",
+        ],
+      },
+      {
+        title: "Flowmeter Base Filling",
+        models: [
+          "Single Head Semi Automatic Filling",
+          "Double Head Semi Automatic Filling",
+          "Four Head Automatic Filling",
+          "Six Head Automatic Filling",
+        ],
+      },
+      {
+        title: "Gravity Filling",
+        models: [
+          "Single Head Semi Automatic Filling",
+          "Double Head Semi Automatic Filling",
+          "Double Head Automatic Filling",
+          "Four Head Automatic Filling",
+          "Six Head Automatic Filling",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Capping Machine",
+    image: autoclaveH,
+    sections: [
+      {
+        title: "Screw Capping",
+        models: [
+          "Single Head Semi Automatic Capping",
+          "Single Head Automatic Screw Capping",
+          "Four Head Automatic Rotary Capping",
+          "Six Head Automatic Rotary Capping",
+          "Eight Head Automatic Rotary Capping",
+          "Ten Head Automatic Rotary Capping",
+        ],
+      },
+      {
+        title: "ROPP Capping",
+        models: [
+          "Single Head Semi Automatic Capping",
+          "Single Head Automatic Capping",
+          "Four Head Automatic Rotary Capping",
+          "Six Head Automatic Rotary Capping",
+          "Eight Head Automatic Rotary Capping",
+          "Ten Head Automatic Rotary Capping",
+        ],
+      },
+      {
+        title: "Lead Pressing",
+        models: [
+          "Single Head Automatic Capping",
+          "Four Head Automatic Rotary Capping",
+          "Six Head Automatic Rotary Capping",
+          "Eight Head Automatic Rotary Capping",
+          "Ten Head Automatic Rotary Capping",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Sticker Labelling Machine",
+    image: lab,
+    sections: [
+      {
+        title: "Labelling Types",
+        models: [
+          "Round Bottle Sticker Labelling",
+          "Single Side Square Bottle Labelling",
+          "Double Side Square Bottle Labelling",
+          "Round Bottle Pneumatic Labelling",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Shrink Tunnel",
+    image: eto,
+    sections: [
+      {
+        title: "Automation Options",
+        models: ["Semi Automatic", "Fully Automatic"],
+      },
+    ],
+  },
+  {
+    title: "Turn Table",
+    image: automation,
+    sections: [
+      {
+        title: "Configuration",
+        models: ["Standard Industrial Turn Table"],
+      },
+    ],
+  },
+];
+
+const productCategoryOptions = machineCatalog.flatMap((group) =>
+  group.sections.flatMap((section) =>
+    section.models.map((model) => ({
+      groupLabel: `${group.title} - ${section.title}`,
+      value: `${group.title} / ${section.title} / ${model}`,
+      label: model,
+    })),
+  ),
+);
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -96,7 +252,7 @@ function Contact() {
                   Service (24×7)
                 </div>
                 <p className="text-sm text-foreground/80 leading-relaxed">
-                  +91 98765 11177
+                  +91 9664867782
                   <br />
                   service@deepindustries.in
                 </p>
@@ -123,7 +279,25 @@ function Contact() {
             </div>
             <div className="grid sm:grid-cols-2 gap-8">
               <Field label="Country" name="country" autoComplete="country-name" />
-              <Field label="Product Category" name="category" placeholder="e.g. Autoclave, CSSD, Pharma…" />
+              <label className="block">
+                <span className="font-mono-tight text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                  Product Category
+                </span>
+                <select
+                  name="category"
+                  defaultValue=""
+                  className="mt-2 w-full bg-transparent border-b border-border focus:border-accent outline-none py-3 text-base text-foreground transition-colors"
+                >
+                  <option value="" disabled>
+                    Select machine model
+                  </option>
+                  {productCategoryOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.groupLabel} - {option.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
             </div>
             <label className="block">
               <span className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground font-semibold">
@@ -144,6 +318,47 @@ function Contact() {
               {submitting ? "Sending…" : "Send Message"}
             </button>
           </form>
+        </div>
+      </section>
+
+      <section className="px-6 pb-32">
+        <div className="max-w-7xl mx-auto">
+          <span className="text-accent text-[11px] uppercase tracking-[0.3em] font-semibold mb-5 block">
+            Machine Portfolio
+          </span>
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.05] max-w-4xl mb-12">
+            Filling, capping, labelling and packaging systems configured to your line.
+          </h2>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {machineCatalog.map((group) => (
+              <article key={group.title} className="rounded-2xl border border-border overflow-hidden bg-card">
+                <div className="aspect-video overflow-hidden">
+                  <img src={group.image} alt={group.title} className="size-full object-cover" loading="lazy" />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-bold tracking-tight mb-4">{group.title}</h3>
+                  <div className="space-y-4 max-h-80 overflow-auto pr-1">
+                    {group.sections.map((section) => (
+                      <div key={`${group.title}-${section.title}`}>
+                        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent mb-2">
+                          {section.title}
+                        </p>
+                        <ul className="space-y-1.5 text-sm text-foreground/85 leading-relaxed">
+                          {section.models.map((model) => (
+                            <li key={`${section.title}-${model}`} className="flex items-start gap-2">
+                              <span className="mt-2 size-1.5 rounded-full bg-accent shrink-0" />
+                              <span>{model}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
