@@ -155,9 +155,6 @@ function Gallery() {
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight max-w-5xl leading-[0.95]">
             Product visuals, plant walkthroughs<br />and project highlights.
           </h1>
-          <p className="mt-6 max-w-3xl text-muted-foreground text-base md:text-lg leading-relaxed">
-            Upload files directly into dedicated image and video folders, and this page renders them automatically.
-          </p>
           <div className="mt-8 flex flex-wrap gap-3 text-xs text-muted-foreground">
             <span className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1.5">
               <ImageIcon className="size-3.5 text-accent" /> {imageList.length} images detected
